@@ -26,7 +26,7 @@ const Login = () => {
     const shopifyAuthUrl = `https://${fullDomain}/admin/oauth/authorize?` +
       `client_id=${import.meta.env.VITE_SHOPIFY_API_KEY}&` +
       `scope=read_customers,read_inventory,read_orders,read_products,write_script_tags&` +
-      `redirect_uri=${encodeURIComponent(import.meta.env.VITE_SHOPIFY_REDIRECT_URI)}&` +
+      `redirect_uri=${encodeURIComponent('https://aladdynbe-production.up.railway.app/api/auth')}&` +
       `state=${state}`
 
     window.location.href = shopifyAuthUrl
